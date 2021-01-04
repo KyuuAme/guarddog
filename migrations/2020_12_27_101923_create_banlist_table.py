@@ -7,10 +7,15 @@ class CreateBanlistTable(Migration):
         """
         Run the migrations.
         """
-        pass
+        with self.schema.create('banlist') as table:
+            table.increments('id')
+            table.big_integer('user_id')
+            table.big_integer('banned_by')
+            table.text('reason')
+            table.integer('banned_on').unsigned()
 
     def down(self):
         """
         Revert the migrations.
         """
-        pass
+        self.schema.drop('banlist')
