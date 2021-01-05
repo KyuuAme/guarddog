@@ -6,3 +6,4 @@ databases:
         user: root
         password: ''
         prefix: ''
+        charset: 'utf8mb4'

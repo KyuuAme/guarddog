@@ -9,8 +9,9 @@ class CreateBanlistTable(Migration):
         """
         with self.schema.create('banlist') as table:
             table.increments('id')
-            table.big_integer('user_id')
-            table.big_integer('banned_by')
+            table.big_integer('user_id').unsigned()
+            table.text('display_name').nullable()
+            table.big_integer('banned_by').unsigned()
             table.text('reason')
             table.integer('banned_on').unsigned()
 

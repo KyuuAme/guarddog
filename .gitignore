@@ -1,5 +1,7 @@
 orator.yml
 .idea
+logs/*.log
+config.ini
 
 # Created by .ignore support plugin (hsz.mobi)
 ### VirtualEnv template
